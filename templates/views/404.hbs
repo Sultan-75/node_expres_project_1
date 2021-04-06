@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>headrlinks}}
+</head>
+
+<body>
+    {{>navbar}}
+    <!-- main headr -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                    <div class="col-md-7 col-12 main_header_left align-items-center">
+                        <figure>
+                            <img src="images/404img.jpg" alt="eror" class="img-fluid">
+                        </figure>
+                    </div>
+                    <div class="col-md-5 col-12 main_header_right align-items-center">
+                        <p class="h3 font-weight-bold text-secondary">Welcome to SulWeather APP</p>
+                        <p class="h3 font-weight-bold text-danger">{{errormsg}}</p>
+                        <a class="btn btn-danger btn-outline-success text-light" href="/">Go Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    {{>footer}}
+</body>
+
+</html>

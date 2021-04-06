@@ -1,0 +1,227 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;900&display=swap");
+/*  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Piazzolla", serif;
+}
+:root {
+  --main-bg: #1e272e;
+  --main-color: #0097e6;
+  --main-color2: #76a4bd;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.row {
+  margin: 0;
+}
+.main_menu {
+  background-color: var(--main-bg);
+}
+.main_menu .navbar {
+  color: #fff;
+  background-color: var(--main-bg);
+  padding: 2rem 0;
+}
+.main_menu .navbar a {
+  font-size: 1.8rem;
+  color: #fff;
+}
+.main_menu .navbar a:hover {
+  color: var(--main-color);
+}
+.main_menu .navbar li {
+  margin-left: 2rem;
+}
+.navbar-toggler {
+  background-color: gray;
+}
+.fa-snowflake {
+  transition: all linear;
+  color: var(--main-color);
+  animation: rot 2s linear infinite;
+}
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* main_header */
+.main_header_left {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_header_left p {
+  font-size: 2rem;
+}
+.main_header_left h1 {
+  margin: 1rem 0 3rem 0;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.main_header_left button {
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px #000;
+  outline: none;
+}
+.main_header_left button:hover {
+  box-shadow: 0 8px 6px -6px var(--main-color);
+}
+.spancolor {
+  color: var(--main-color);
+}
+figure img {
+  filter: drop-shadow(0 0.5rem 1rem rgba(0, 0, 0, 0.3));
+}
+.main_header_right {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* footer code */
+.footer {
+  margin-top: auto;
+  width: 100%;
+  background-color: var(--main-bg);
+}
+.footer p {
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 5rem;
+}
+/* weather page */
+.temp_form {
+  width: 60%;
+  margin: 5rem auto 4rem;
+  position: relative;
+}
+.temp_form input[type="text"] {
+  width: 100%;
+  padding: 1rem 5rem 1rem 2rem;
+  background-color: #1e202b;
+  color: #fff;
+  font-size: 1.7rem;
+  border-radius: 3rem;
+  outline: none;
+  border: none;
+}
+::placeholder {
+  color: #bfc1c8;
+}
+.temp_form input[type="submit"] {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid #1e202b;
+  padding: 0 3rem;
+  background-color: #0097e6;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 3rem;
+  font-weight: bold;
+  outline: none !important;
+}
+.temp_form input[type="submit"]:hover {
+  background-color: #fff;
+  color: #0097e6;
+}
+.tempinfo {
+  width: 40rem;
+  margin: auto;
+  min-height: 20rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #323544;
+  font-family: "Piazzolla", serif;
+}
+.toplayer {
+  width: 100%;
+  height: 20%;
+  background-color: #2d303d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2rem 0;
+}
+.toplayer p {
+  font-weight: 500;
+  padding: 2rem;
+  color: #fff;
+  font-size: 1.8rem;
+}
+.main_layer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  padding: 2rem;
+}
+.main_layer #city_name {
+  padding: 2rem;
+  color: #bfc1c8;
+  font-weight: 300;
+  font-size: 2rem;
+}
+.main_layer .middle_layer {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa {
+  font-size: 5rem;
+  font-weight: 900;
+}
+.main_layer .middle_layer .fa {
+  color: #0098da;
+}
+sup {
+  font-size: 4rem;
+  margin-top: -2rem;
+}
+.data_hide {
+  visibility: hidden;
+  transition: all 0.3s linear;
+}
+/* Responsive code */
+@media (max-width: 768px) {
+  .main_header_left {
+    height: auto;
+    margin: 5rem 0;
+  }
+  .main_header_right {
+    height: auto;
+    margin: 2rem 0;
+  }
+  .temp_form {
+    width: auto;
+  }
+  .main_layer .middle_layer p,
+  .main_layer .middle_layer .fa {
+    font-size: 3rem;
+  }
+}
